@@ -45,6 +45,15 @@ class ProductController extends Controller
         $product->harga = $request->input('harga');
         $product->stok = $request->input('stok');
         $product->idsuplier = $request->input('idsuplier');
+        // if($request->hasFile('foto')){
+        //     // $name = time().rand(1,100).'.'.$file->extension();
+        //     $request->file('foto')->move('/assets/image', $request->file('foto'));
+
+          
+        // }
+        // $product->foto = $request->input('foto');
+
+       
         $product->save();
 
         return redirect('/product')->with('success', 'Successfully!');

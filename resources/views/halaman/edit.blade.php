@@ -66,34 +66,23 @@
             </div>
           </div>
           <div class="card-body">
-           <form action="/product/create" method="post" enctype="multipart/form-data">
-            @csrf
+            <form action="/detail/update/{{ $detail->id }}" method="POST">
+                @csrf
+                @method('put')
             <div class="mb-3">
-                <label for="nama_product" class="form-label">Nama Product</label>
-                <input type="text" class="form-control" id="nama_product" name="nama_product" placeholder="nama product">
+                <label for="label" class="form-label">Berat Produk</label>
+                <input type="text" class="form-control" id="berat_produk" name="berat_produk"  value="{{ $detail->berat_produk }}" placeholder="berat produk">
              </div>
             <div class="mb-3">
-                <label for="label" class="form-label">Jenis Product</label>
-                <input type="text" class="form-control" id="jenis_product" name="jenis_product" placeholder="jenis product">
+                <label for="label" class="form-label">Deskripsi produk</label>
+                <input type="text" class="form-control" id="deskripsi_produk" name="deskripsi_produk" value="{{ $detail->deskripsi_produk }}" placeholder="harga">
+             </div>
+             <div class="mb-3">
+                <label for="nama_product" class="form-label">Ranting</label>
+                <input type="text" class="form-control" id="ranting" name="ranting" value="{{ $detail->ranting }}" placeholder="ranting">
              </div>
             <div class="mb-3">
-                <label for="label" class="form-label">Harga</label>
-                <input type="number" class="form-control" id="harga" name="harga" placeholder="harga">
-             </div>
-            <div class="mb-3">
-                <label for="label" class="form-label">Stok</label>
-                <input type="number" class="form-control" id="stok" name="stok" placeholder="harga">
-             </div>
-            <div class="mb-3">
-                <label for="label" class="form-label">ID Supllier</label>
-                <input type="text" class="form-control" id="idsuplier" name="idsuplier" placeholder="harga">
-             </div>
-            <div class="mb-3">
-                <label for="label" class="form-label">Image</label>
-                <input type="file" class="form-control" id="foto" name="foto" placeholder="harga">
-             </div>
-            <div class="mb-3">
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success">Update</button>
              </div>
              
             </form>

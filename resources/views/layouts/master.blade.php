@@ -144,18 +144,18 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href=". ">Home</a></li>
+                            <li class="active"><a href="/home">Home</a></li>
                             <li><a href="/admin">Shop</a></li>
                             <li><a href="#">Details</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="">Shop Details</a></li>
-                                    <li><a href="">Shoping Cart</a></li>
-                                    <li><a href="">Check Out</a></li>
-                                    <li><a href="">Blog Details</a></li>
+                                    <li><a href="/shop">Shop Details</a></li>
+                                    <li><a href="/crud">CRUD detail</a></li>
+                                  
+                                    <li><a href="/blog">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Kategori</a></li>
-                            <li><a href="">Profile</a></li>
+                            <li><a href="/categories">Kategori</a></li>
+                            <li><a href="/profile">Profile</a></li>
                         </ul>
                     </nav>
                 </div>

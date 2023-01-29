@@ -22,6 +22,13 @@ Route::get('/fruits', [\App\Http\Controllers\FruitsController::class, 'index']);
 
 
 Route::get('/shop', [\App\Http\Controllers\ShopController::class, 'index']);
+Route::get('/shop/create', [\App\Http\Controllers\ShopController::class, 'create']);
+Route::post('/shop/store', [\App\Http\Controllers\ShopController::class, 'store']);
+Route::get('/detail/edit/{id}', [\App\Http\Controllers\ShopController::class, 'edit']);
+Route::put('/detail/update/{id}', [\App\Http\Controllers\ShopController::class, 'update']);
+Route::post('/detail/delete/{id}', [\App\Http\Controllers\ShopController::class, 'destroy']);
+Route::get('/blog', [\App\Http\Controllers\ShopController::class, 'blog']);
+Route::get('/crud', [\App\Http\Controllers\ShopController::class, 'crud']);
 Route::get('/shopcart', [\App\Http\Controllers\ShoppingCartController::class, 'index']);
 Route::get('/checkout', [\App\Http\Controllers\CheckOutController::class, 'index']);
 Route::put('/checkout/bayar', [\App\Http\Controllers\CheckOutController::class, 'bayar']);
@@ -34,7 +41,10 @@ Route::post('/', [\App\Http\Controllers\RegisterController::class, 'regis']);
 
 Route::post('/profile/create', [\App\Http\Controllers\ProfileController::class, 'store']);
 
+Route::get('/fav', [\App\Http\Controllers\FavoriteController::class, 'index']);
+Route::get('/love', [\App\Http\Controllers\FavoriteController::class, 'fav']);
 Route::get('/logOUT', [\App\Http\Controllers\RegisterController::class, 'logout']);
+Route::get('/logoutAdmin', [\App\Http\Controllers\RegisterController::class, 'logoutA']);
 Auth::routes();
 
 Route::get('/admin', [\App\Http\Controllers\Admin\DashboardController::class, 'index']);

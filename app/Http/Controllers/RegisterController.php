@@ -41,6 +41,16 @@ class RegisterController extends Controller
 
         return redirect('/login')->with('success', 'LogOut Successfully!');
     }
+    public function logoutA(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/home')->with('success', 'LogOut Successfully!');
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -12,7 +12,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Category Fruits</title>
+    <title>CRUD Detail Produk</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body>
@@ -22,28 +22,28 @@
 <center>
 @section('content')
     {{-- <h1>Categories</h1> --}}
-    <button class="btn btn-primary"><a href="/categories/create" style="color: black; justify-content:right" >Tambah Data</a></button>
+    <button class="btn btn-primary"><a href="/shop/create" style="color: black; justify-content:right" >Tambah Data</a></button>
     <table class="table table-sm table-striped table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Created At</th>
-                <th>Updated At</th>
+                <th>Kode Produk</th>
+                <th>Berat Produk</th>
+                <th>Deskripsi Produk</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($categories as $category)
+          @foreach ($detail as $dt)
                 <tr>
-                    <td>{{ $category->id }}</td>
-                    <td>{{ $category->name }}</td>
-                    <td>{{ $category->created_at }}</td>
-                    <td>{{ $category->updated_at }}</td>
+                    <td>{{ $dt->berat_produk }}</td>
+                    <td>{{ $dt->deskripsi_produk }}</td>
+                    <td>{{ $dt->ranting }}</td>
+                    {{-- <td>{{ $category->updated_at }}</td> --}}
                     <td>
                         <a href="">View</a>
-                        <a href="/categories/edit/{{ $category->id }}">Edit</a>
-                        <form action="/categories/delete/{{  $category->id }}" method="POST">
+                        <a href="/detail/edit/{{ $dt->id }}">Edit</a>
+                        <form action="/detail/delete/{{  $dt->id }}" method="POST">
                             @csrf
                             {{-- @method('DELETE') --}}
                             <button type="submit">Delete</button>

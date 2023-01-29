@@ -54,27 +54,22 @@
             </a>
           </li>
           {{-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="/penjualan" class="nav-link">
+            <i class="far fa-square nav-icon"></i>
+
               <p>
                 Penjualan
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/penjualan" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Penjualan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/LaporanP" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Laporan Penjualan</p>
-                </a>               
-              </li>
-            </ul>
+          </li> --}}
+          {{-- <li class="nav-item">
+            <a href="/LaporanP" class="nav-link">
+            <i class="far fa-square nav-icon"></i>
+
+              <p>
+                Laporan  Penjualan
+              </p>
+            </a>
           </li> --}}
           <li class="nav-item">
             <a href="/review" class="nav-link">
@@ -82,6 +77,24 @@
 
               <p>
                 Review
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/shop/create" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+
+              <p>
+                Detail Product
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/logoutAdmin" class="nav-link">
+            <i class="far fa-square nav-icon"></i>
+
+              <p>
+                Logout
               </p>
             </a>
           </li>
